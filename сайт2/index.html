@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillUp — Онлайн білім беру платформасы</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+
+            <a href="#home" class="logo">
+                <span>✦</span> SkillUp
+            </a>
+
+            <nav class="menu">
+                <a href="#home">Басты бет</a>
+                <a href="#courses">Курстар</a>
+                <a href="#about">Біз туралы</a>
+                <a href="#contact">Байланыс</a>
+            </nav>
+
+            <div class="nav-buttons">
+                <button id="themeBtn" class="theme-btn">🌙</button>
+                <button class="login-btn" onclick="openModal()">
+                    Кіру
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section id="home" class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <div class="badge">
+                        🚀 Болашағыңды бүгін баста
+                    </div>
+
+                    <h1>
+                        Болашағыңды
+                        <span>SkillUp</span>-пен құр!
+                    </h1>
+
+                    <p>
+                        IT, веб-дизайн және бағдарламалау бағыттарын
+                        заманауи форматта үйрен. Біліміңді дамытып,
+                        болашақ мамандығыңа алғашқы қадам жаса.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#courses" class="primary-btn">
+                            Курстарды көру →
+                        </a>
+
+                        <button class="secondary-btn" onclick="openTest()">
+                            Тест тапсыру
+                        </button>
+                    </div>
+
+                    <div class="statistics">
+
+                        <div>
+                            <strong>10K+</strong>
+                            <span>Студент</span>
+                        </div>
+
+                        <div>
+                            <strong>25+</strong>
+                            <span>Курс</span>
+                        </div>
+
+                        <div>
+                            <strong>95%</strong>
+                            <span>Қанағаттану</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="code-window">
+
+                        <div class="window-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="code-content">
+
+                            <p>
+                                <span class="purple">&lt;h1&gt;</span>
+                            </p>
+
+                            <h3>
+                                Start Learning
+                            </h3>
+
+                            <p>
+                                <span class="purple">&lt;/h1&gt;</span>
+                            </p>
+
+                            <div class="progress-box">
+                                <div class="progress-info">
+                                    <span>HTML & CSS</span>
+                                    <span>85%</span>
+                                </div>
+
+                                <div class="progress">
+                                    <div style="width:85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-box">
+                                <div class="progress-info">
+                                    <span>JavaScript</span>
+                                    <span>65%</span>
+                                </div>
+
+                                <div class="progress">
+                                    <div style="width:65%"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-box">
+                                <div class="progress-info">
+                                    <span>Figma</span>
+                                    <span>90%</span>
+                                </div>
+
+                                <div class="progress">
+                                    <div style="width:90%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- COURSES -->
+        <section id="courses" class="courses section">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>БІЛІМ</span>
+                    <h2>Танымал курстар</h2>
+                    <p>
+                        Қызығушылығыңа сәйкес бағытты таңда
+                        және жаңа дағдыларды үйрен.
+                    </p>
+                </div>
+
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔎 Курсты іздеу..."
+                    >
+
+                </div>
+
+
+                <div class="course-grid" id="courseList">
+
+                    <!-- COURSE 1 -->
+                    <article class="course-card">
+
+                        <div class="course-icon html">
+                            &lt;/&gt;
+                        </div>
+
+                        <span class="level beginner">
+                            Beginner
+                        </span>
+
+                        <h3>HTML & CSS</h3>
+
+                        <p>
+                            Веб-сайт жасаудың негіздерін
+                            нөлден бастап үйрен.
+                        </p>
+
+                        <div class="course-info">
+                            <span>📚 18 сабақ</span>
+                            <span>⏱ 12 сағ</span>
+                        </div>
+
+                        <button
+                            class="course-btn"
+                            onclick="startCourse('HTML & CSS')">
+                            Курсты бастау →
+                        </button>
+
+                    </article>
+
+
+                    <!-- COURSE 2 -->
+                    <article class="course-card">
+
+                        <div class="course-icon js">
+                            JS
+                        </div>
+
+                        <span class="level medium">
+                            Intermediate
+                        </span>
+
+                        <h3>JavaScript</h3>
+
+                        <p>
+                            Сайтқа интерактивті функциялар
+                            қосуды үйрен.
+                        </p>
+
+                        <div class="course-info">
+                            <span>📚 24 сабақ</span>
+                            <span>⏱ 18 сағ</span>
+                        </div>
+
+                        <button
+                            class="course-btn"
+                            onclick="startCourse('JavaScript')">
+                            Курсты бастау →
+                        </button>
+
+                    </article>
+
+
+                    <!-- COURSE 3 -->
+                    <article class="course-card">
+
+                        <div class="course-icon figma">
+                            ✦
+                        </div>
+
+                        <span class="level beginner">
+                            Beginner
+                        </span>
+
+                        <h3>UI/UX & Figma</h3>
+
+                        <p>
+                            Заманауи интерфейс пен сайт
+                            дизайнын жасауды үйрен.
+                        </p>
+
+                        <div class="course-info">
+                            <span>📚 15 сабақ</span>
+                            <span>⏱ 10 сағ</span>
+                        </div>
+
+                        <button
+                            class="course-btn"
+                            onclick="startCourse('UI/UX & Figma')">
+                            Курсты бастау →
+                        </button>
+
+                    </article>
+
+
+                    <!-- COURSE 4 -->
+                    <article class="course-card">
+
+                        <div class="course-icon python">
+                            PY
+                        </div>
+
+                        <span class="level medium">
+                            Intermediate
+                        </span>
+
+                        <h3>Python</h3>
+
+                        <p>
+                            Бағдарламалаудың негізгі принциптерін
+                            Python арқылы меңгер.
+                        </p>
+
+                        <div class="course-info">
+                            <span>📚 30 сабақ</span>
+                            <span>⏱ 22 сағ</span>
+                        </div>
+
+                        <button
+                            class="course-btn"
+                            onclick="startCourse('Python')">
+                            Курсты бастау →
+                        </button>
+
+                    </article>
+
+                </div>
+
+                <div id="noCourses" class="no-courses">
+                    Курс табылмады 😕
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about section">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+
+                    <div class="about-circle">
+                        🎓
+                    </div>
+
+                    <div class="floating-card">
+                        ⭐ 4.9/5 рейтинг
+                    </div>
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <span>БІЗ ТУРАЛЫ</span>
+
+                    <h2>
+                        Білім алуды
+                        <span>жеңіл әрі қызықты</span>
+                        етеміз
+                    </h2>
+
+                    <p>
+                        SkillUp — заманауи IT және дизайн
+                        бағыттарын үйренуге арналған онлайн
+                        білім беру платформасы.
+                    </p>
+
+                    <div class="features">
+
+                        <div class="feature">
+                            <div>✓</div>
+                            <p>
+                                <strong>Практикалық сабақтар</strong>
+                                <br>
+                                Теориямен қатар нақты жобалар жаса.
+                            </p>
+                        </div>
+
+                        <div class="feature">
+                            <div>✓</div>
+                            <p>
+                                <strong>Өз қарқыныңмен оқы</strong>
+                                <br>
+                                Сабақтарды қалаған уақытта қара.
+                            </p>
+                        </div>
+
+                        <div class="feature">
+                            <div>✓</div>
+                            <p>
+                                <strong>Портфолио жина</strong>
+                                <br>
+                                Жасаған жобаларыңды портфолиоға қос.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-section section">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>PROGRESS</span>
+                    <h2>Оқу прогресің</h2>
+                    <p>
+                        Өз нәтижелеріңді бақыла және
+                        жаңа мақсаттарға жет.
+                    </p>
+                </div>
+
+
+                <div class="progress-dashboard">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            💻
+                        </div>
+
+                        <div>
+                            <h3>HTML & CSS</h3>
+                            <p>18 сабақтың 15-і аяқталды</p>
+
+                            <div class="dashboard-progress">
+                                <div style="width:85%"></div>
+                            </div>
+
+                            <strong>85%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            ⚡
+                        </div>
+
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>24 сабақтың 16-сы аяқталды</p>
+
+                            <div class="dashboard-progress">
+                                <div style="width:65%"></div>
+                            </div>
+
+                            <strong>65%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            🎨
+                        </div>
+
+                        <div>
+                            <h3>Figma</h3>
+                            <p>15 сабақтың 13-і аяқталды</p>
+
+                            <div class="dashboard-progress">
+                                <div style="width:90%"></div>
+                            </div>
+
+                            <strong>90%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact section">
+
+            <div class="container contact-box">
+
+                <div>
+                    <span>БАЙЛАНЫС</span>
+
+                    <h2>
+                        Сұрақтарың бар ма?
+                    </h2>
+
+                    <p>
+                        Бізге хабарлама жібер.
+                        Саған міндетті түрде жауап береміз.
+                    </p>
+                </div>
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Атыңыз"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="Хабарлама..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="primary-btn">
+                        Жіберу →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <a href="#home" class="logo">
+                    <span>✦</span> SkillUp
+                </a>
+
+                <p>
+                    Болашаққа арналған білім платформасы.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Басты бет</a>
+                <a href="#courses">Курстар</a>
+                <a href="#about">Біз туралы</a>
+                <a href="#contact">Байланыс</a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 SkillUp. Барлық құқықтар қорғалған.
+        </div>
+
+    </footer>
+
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeModal()">
+                ×
+            </button>
+
+            <div class="modal-icon">
+                👤
+            </div>
+
+            <h2>SkillUp-қа кіру</h2>
+
+            <p>
+                Жеке оқу профиліңе кір.
+            </p>
+
+            <form id="loginForm">
+
+                <input
+                    type="text"
+                    id="loginName"
+                    placeholder="Атыңыз"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <button class="primary-btn" type="submit">
+                    Кіру
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- TEST MODAL -->
+    <div id="testModal" class="modal">
+
+        <div class="modal-content test-content">
+
+            <button class="close" onclick="closeTest()">
+                ×
+            </button>
+
+            <h2>💡 IT білім тесті</h2>
+
+            <div id="quiz">
+
+                <p class="question">
+                    1. HTML не үшін қолданылады?
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="correct">
+                    Веб-беттің құрылымын жасау үшін
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    Сурет өңдеу үшін
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    Музыка тыңдау үшін
+                </label>
+
+
+                <p class="question">
+                    2. CSS не үшін қажет?
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    Деректер базасын жасау
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="correct">
+                    Сайттың дизайнын жасау
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    Видео түсіру
+                </label>
+
+
+                <p class="question">
+                    3. JavaScript не үшін қолданылады?
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="correct">
+                    Сайтқа интерактивтілік қосу үшін
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    Тек мәтін жазу үшін
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    Компьютерді өшіру үшін
+                </label>
+
+                <button
+                    class="primary-btn test-submit"
+                    onclick="checkTest()">
+                    Нәтижені көру
+                </button>
+
+                <div id="result"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTIFICATION -->
+    <div id="notification" class="notification">
+        Хабарлама
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
